@@ -1,0 +1,98 @@
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Calendar</title>
+      <meta name="description" content="Calendar">
+      <meta name="author" content="Charles Anderson">
+      <link rel="stylesheet" href="style.css">
+    
+    </head>
+    
+    <body onload="getData()">
+        <!-- <button onclick="">click</button> -->
+      <div class="content">
+        <div class="calendar-container">
+          <div class="calendar"> 
+            <div class="year-header"> 
+              <span class="year" id="label"></span> 
+            </div> 
+            <div class="months-table"> 
+              <div>
+                <div class="months-row">
+                  <div class="month">Jan</div> 
+                  <div class="month">Feb</div> 
+                  <div class="month">Mar</div> 
+                  <div class="month">Apr</div> 
+                  <div class="month">May</div> 
+                  <div class="month">Jun</div> 
+                  <div class="month">Jul</div>
+                  <div class="month">Aug</div> 
+                  <div class="month">Sep</div> 
+                  <div class="month">Oct</div>          
+                  <div class="month">Nov</div>
+                  <div class="month">Dec</div>
+                </div>
+              </div>
+            </div> 
+            
+            <div class="days-table"> 
+              <div class="day">Sun</div> 
+              <div class="day">Mon</div> 
+              <div class="day">Tue</div> 
+              <div class="day">Wed</div> 
+              <div class="day">Thu</div> 
+              <div class="day">Fri</div> 
+              <div class="day">Sat</div>
+            </div> 
+            <div class="frame"> 
+              <div class="dates-table"> 
+                  <div class="tbody">             
+                  </div> 
+              </div>
+            </div> 
+            <button class="button" id="add-button">Add New Class</button>
+          </div>
+        </div>
+        <div class="events-container">
+        </div>
+        
+        <div class="dialog" id="dialog">
+            <h2 class="dialog-header"> Add New Event </h2>
+            <form class="form" id="form">
+              <div class="form-container" align="center">
+                <label class="form-label" id="valueFromMyButton" for="name">class name</label>
+                <input class="input" type="text" id="name" maxlength="36">
+
+                <label class="form-label" id="valueFromMyButton" for="startTime">start time</label>
+                <input class="input" type="time" id="startTime">
+
+                <label class="form-label" id="valueFromMyButton" for="endTime">end time</label>
+                <input class="input" type="time" id="endTime">
+
+                <label class="form-label" id="valueFromMyButton" for="teacher">Select teacher </label>
+                <select name="teacher" id="teacher">
+                    <option value="abc">ABC</option>
+                    <option value="def">DEF</option>
+                    <option value="ghi">GHI</option>
+                </select>
+                <br> <br> <br>
+
+                <input type="button" value="Cancel" class="button" id="cancel-button">
+                <input type="button" value="OK" class="button" id="ok-button">
+              </div>
+            </form>
+          </div>
+      </div>
+      <!-- Dialog Box-->
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" 
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="app.js"></script>
+    </body>
+    </html>
