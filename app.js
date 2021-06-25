@@ -163,7 +163,7 @@ var event_data = {
 };
 
 //fecth data
-var url = "https://my-class-scheduler.herokuapp.com/api/v1/class"
+var url = "http://app-81181cea-8ff5-439e-a610-c59c4eb16357.cleverapps.io/api/v1/class"
 function getData(){
     axios.get(url).then(res=>{
         // console.log(res.data);
